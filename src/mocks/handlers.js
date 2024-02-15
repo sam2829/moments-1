@@ -1,7 +1,8 @@
-const baseURL = "https://crf-api-1-952b00a16d56.herokuapp.com/"
+const baseURL = "https://crf-api-1-952b00a16d56.herokuapp.com/";
+import { rest } from "msw";
 
 export const handlers = [
-    rest.get(`${base.URL}dj-rest-auth/user/`, (req, res, ctx) => {
+    rest.get(`${baseURL}dj-rest-auth/user/`, (req, res, ctx) => {
         return res(
             ctx.json({
                 "pk": 9,
